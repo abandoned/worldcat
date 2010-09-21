@@ -1,7 +1,7 @@
 = WorldCat Search API
 
 A WorldCat API for Ruby to interact with WorldCat search webservices.
-http://www.worldcat.org
+http://oclc.org/developer/documentation/worldcat-search-api/using-api
 
 == Usage
 
