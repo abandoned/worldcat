@@ -1,0 +1,2 @@
+rvm --create use 1.9.2@worldcat
+rvm wrapper 1.9.2@worldcat textmate
