@@ -6,8 +6,9 @@ describe WorldCat do
   end
 
   it "foos" do
-    atom = @client.open_search :query => "Civil War"
-    pp atom.feed
+    cql = 'srw.kw="deleuze" and srw.mt="ebk"'
+    records = @client.sru_search :query => cql, :format => "dublin"
+    pp records.first
     #puts atom.entries.first.author
   end
 end
