@@ -3,12 +3,12 @@
 #
 # Author:: Vivien Didelot 'v0n' <vivien.didelot@gmail.com>
 
-require 'rubygems'       # needed by simple-rss
-require 'open-uri'       # used to fetch responses
-require 'simple-rss'     # used for Atom and RSS format
-require 'marc'           # used for MARC records
-require 'rexml/document' # used for many XML purposes
-require 'json'           # used for JSON format
+require 'rubygems'                         # needed by simple-rss
+require 'open-uri'                         # used to fetch responses
+require 'simple-rss'                       # used for Atom and RSS format
+require 'marc'                             # used for MARC records
+require 'json'                             # used for JSON format
+require 'active_support/xml_mini/nokogiri' # used for many XML purposes
 
 # The WorldCat class methods use WorldCat webservices.
 # Options are given as a hash and Symbol keys may be:
@@ -120,7 +120,7 @@ class WorldCat
     if format.nil? || format == "info:srw/schema/1/marcxml"
       marc_to_array
     else
-      REXML::Document.new @raw_response
+      Nokogiri::XML(@raw_response).to_hash
     end
   end
 

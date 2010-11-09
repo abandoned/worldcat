@@ -1,26 +1,28 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    activesupport (3.0.1)
     diff-lcs (1.1.2)
     json (1.4.6)
-    marc (0.3.3)
-    rspec (2.0.0.beta.22)
-      rspec-core (= 2.0.0.beta.22)
-      rspec-expectations (= 2.0.0.beta.22)
-      rspec-mocks (= 2.0.0.beta.22)
-    rspec-core (2.0.0.beta.22)
-    rspec-expectations (2.0.0.beta.22)
-      diff-lcs (>= 1.1.2)
-    rspec-mocks (2.0.0.beta.22)
-      rspec-core (= 2.0.0.beta.22)
-      rspec-expectations (= 2.0.0.beta.22)
+    marc (0.4.1)
+    nokogiri (1.4.3.1)
+    rspec (2.1.0)
+      rspec-core (~> 2.1.0)
+      rspec-expectations (~> 2.1.0)
+      rspec-mocks (~> 2.1.0)
+    rspec-core (2.1.0)
+    rspec-expectations (2.1.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.1.0)
     simple-rss (1.2.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport
   json
   marc
-  rspec (~> 2.0.0.beta.22)
+  nokogiri
+  rspec
   simple-rss
